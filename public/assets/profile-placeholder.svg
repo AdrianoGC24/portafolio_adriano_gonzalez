@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 610">
+  <defs>
+    <linearGradient id="back" x2=".85" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#f4f3ff"/><stop offset="1" stop-color="#e5e2fb"/></linearGradient>
+    <linearGradient id="ink" x2=".7" y2="1"><stop stop-color="#504b91"/><stop offset="1" stop-color="#282541"/></linearGradient>
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0v25" fill="none" stroke="#a5a1dc" opacity=".35"/></pattern>
+    <radialGradient id="glow"><stop stop-color="#fff"/><stop offset="1" stop-color="#eeecff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <path fill="url(#back)" d="M0 0h580v610H0z"/>
+  <path fill="url(#grid)" d="M0 0h580v610H0z"/>
+  <circle cx="290" cy="292" r="253" fill="url(#glow)"/>
+  <g fill="none" stroke="#7771c7">
+    <circle cx="290" cy="288" r="193" opacity=".5"/>
+    <circle cx="290" cy="288" r="171" stroke-dasharray="3 7" opacity=".55"/>
+    <circle cx="290" cy="288" r="146" opacity=".25"/>
+    <path d="M290 71v435M68 288h444" stroke-dasharray="3 8" opacity=".55"/>
+    <path d="M48 100V55h45m394 0h45v45M48 503v45h45m394 0h45v-45" opacity=".65"/>
+    <path d="m81 434 44-43 38 15 59-59 39 17 71-53 44 25 63-65 54-9" stroke-width="2" opacity=".48"/>
+  </g>
+  <g fill="#7370e8"><circle cx="290" cy="95" r="4"/><circle cx="483" cy="288" r="4"/><circle cx="125" cy="391" r="3"/><circle cx="439" cy="271" r="3"/></g>
+  <path d="M142 464c7-70 61-115 115-124l33 28 34-28c55 10 110 55 115 124-77 52-216 53-297 0Z" fill="url(#ink)"/>
+  <path d="M246 326c13 14 27 22 44 22 16 0 32-8 45-22v31l-45 36-44-36Z" fill="#9e9acb"/>
+  <path d="M224 240c0-49 27-75 66-75s66 26 66 75v35c0 42-37 75-66 75s-66-33-66-75Z" fill="#b5b0dd"/>
+  <path d="M224 266c-4-6-8-25-8-38 0-44 29-76 74-76 42 0 73 29 73 72 0 13-4 26-8 33l-6-40c-47-1-76-11-93-22-6 17-18 25-32 33Z" fill="url(#ink)"/>
+  <path d="m246 348 44 45-27 32-39-73m111-4-45 45 28 32 39-73" fill="none" stroke="#b5b0dd" stroke-width="2" opacity=".7"/>
+  <path d="M290 393v99" stroke="#b5b0dd" stroke-width="2" opacity=".45"/>
+</svg>
