@@ -18,4 +18,5 @@ export default defineConfig({
       },
     },
   ],
+  base: '/portafolio_adriano_gonzalez/'
 })
