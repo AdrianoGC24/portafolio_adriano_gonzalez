@@ -6,7 +6,13 @@ export const socialIcons = { linkedin: Linkedin, github: Github, email: Mail, in
 
 export function DownloadCv({ language, className = '' }: { language: Language; className?: string }) {
   return (
-    <a href={portfolio.cv[language]} download className={`button button-secondary ${className}`}>
+    <a
+      href={portfolio.cv[language]}
+      download="Adriano De Jesús González Cera.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`button button-secondary ${className}`}
+    >
       <Download size={17} aria-hidden="true" />
       {portfolio.copy[language].cv}
     </a>

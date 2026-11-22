@@ -26,7 +26,8 @@ interface Technology {
   logo: string
 }
 
-const asset = (file: string) => `/assets/${file}`
+const base = (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL) || '/portafolio_adriano_gonzalez/'
+const asset = (file: string) => `${base.replace(/\/$/, '')}/assets/${encodeURI(file)}`
 const devicon = (directory: string, file = 'original') =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${directory}/${directory}-${file}.svg`
 
@@ -69,7 +70,7 @@ const projects: Project[] = [
       es: 'Plataforma híbrida OLTP + OLAP en AWS para gestionar ~380 vuelos diarios y 5,8 millones de registros históricos. Integra ingesta serverless con Lambda (OpenSky y Open-Meteo), RabbitMQ Fanout, API REST y workers en FastAPI, PostgreSQL 16 en RDS, S3 Medallion, Airflow, Spark, Glue, Athena y Power BI.',
       en: 'Hybrid OLTP + OLAP platform on AWS for ~380 daily flights and 5.8 million historical records. It uses serverless Lambda ingestion (OpenSky and Open-Meteo), RabbitMQ Fanout, a REST API and workers in FastAPI, PostgreSQL 16 on RDS, S3 Medallion, Airflow, Spark, Glue, Athena, and Power BI.',
     },
-    image: asset('vueladata-infra.png'),
+    image: asset('vueladata-arquitectura-aws.png'),
     imageAlt: { es: 'Diagrama de arquitectura AWS de VuelaData', en: 'VuelaData AWS architecture diagram' },
     tags: ['AWS', 'FastAPI', 'PostgreSQL', 'Airflow', 'Spark', 'Power BI'],
     actions: [
@@ -89,7 +90,7 @@ const projects: Project[] = [
       es: 'Aplicación móvil en Flutter enfocada en una experiencia financiera moderna con dashboard de balance, tarjetas y movimientos.',
       en: 'A Flutter app for a modern banking experience with a dashboard for balances, cards, and transactions.',
     },
-    image: asset('bankos-dashboard.png'),
+    image: asset('bankos-mobile-demo-android.png'),
     imageAlt: { es: 'Capturas de una transferencia simulada en BankOs para Android', en: 'Screenshots of a simulated transfer in BankOs for Android' },
     tags: ['Flutter', 'FastAPI', 'PostgreSQL', 'Redis'],
     actions: [{ type: 'repo', href: 'https://github.com/BankOs-project' }],
@@ -104,7 +105,7 @@ const projects: Project[] = [
       es: 'Plataforma web para la Fundación Anda que da visibilidad a sus proyectos sociales y facilita encontrar canales de apoyo.',
       en: 'A website for Fundación Anda that gives its social projects visibility and makes it easier to find ways to help.',
     },
-    image: asset('fundacion-anda.png'),
+    image: asset('fundacion-anda-vistas-web.png'),
     imageAlt: { es: 'Capturas de escritorio y móvil del sitio de Fundación Anda', en: 'Desktop and mobile screenshots of the Fundación Anda website' },
     tags: ['React', 'TypeScript', 'Tailwind CSS'],
     actions: [{ type: 'site', href: 'https://adrianogc24.github.io/Fundacion-Anda/' }],
@@ -171,7 +172,10 @@ export const portfolio = {
   email,
   languages: { es: 'ES', en: 'EN' } satisfies Record<Language, string>,
   profile: { image: asset('profile.png'), fallback: asset('profile-placeholder.svg') },
-  cv: { es: asset('cv-adriano-es.pdf'), en: asset('cv-adriano-en.pdf') },
+  cv: {
+    es: asset('Adriano De Jesús González Cera.pdf'),
+    en: asset('Adriano De Jesús González Cera.pdf'),
+  },
   socials,
   technologies,
   projects,
